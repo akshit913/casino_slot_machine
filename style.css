@@ -1,0 +1,84 @@
+body {
+    background-color: beige;
+}
+.heading {
+    font-size: 60pt;
+    text-align: center;
+    font-family: 'MyWebFont', Fallback, sans-serif;
+    color: darkkhaki;
+}
+@font-face {
+    font-family: 'MyWebFont';
+    src:  url('casino.3d-filled-marquee-regular.ttf') format('truetype')
+  }
+.container {
+    height: auto;
+    width: 900px;
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    align-items: safe center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    align-items: safe flex-start;
+    justify-content: center;
+}
+.machine {
+    background-color: peru;
+    border: dashed brown 3px;
+    height: 300px;
+    width: 900px;
+    margin: 50px;
+    display: flex;
+    z-index: 5;
+    line-height: 500px;
+}
+.slot {
+    height: 250px;
+    margin: 20px;
+    width: 250px;
+    background-color: beige;
+    border: solid darkblue 2px;
+    text-align: center;
+    font-size: 80pt;
+    line-height: 250px;
+    z-index: 1;
+    overflow: hidden;
+}
+.slot > .value {
+    z-index: 3; 
+    animation: slotspin; 
+    animation-iteration-count:  infinite;
+    animation-duration: calc(1s/var(--speed));
+}
+@keyframes slotspin {
+    0% {
+        transform: translateY(-200px);
+    }
+    100% {
+        transform: translateY(2 00px);
+    }
+}
+:root {
+    --speed : 10;
+}
+#inpS {
+    font-size: 30pt;
+    margin-left: 30px;
+    width: 50px;
+    display: none;
+}
+#run {
+    height: 50px;
+    width: 150px;
+    background-color: peru;
+    border: dashed brown;
+    border-radius: 10px;
+    color: beige;
+}
